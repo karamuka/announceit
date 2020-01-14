@@ -1,4 +1,4 @@
-**AnnounceIT**
+# AnnounceIT
 
 Since the rise of the internet, more people have switched their attention from spending hours
 watching TV and listening to the radio or even reading newspapers to scrolling and tapping on
@@ -8,7 +8,7 @@ traditional approaches.
 > AnnounceIT comes in as a solution to broadcasting agencies which will will allow them to be able
 to receive and manage announcements.
 
-**Features:**
+## Features:
 
 1. User can sign up.
 2. User can sign in.
