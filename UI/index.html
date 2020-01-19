@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./public/img/logo-light.png" type="image/png">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <script src="./public/js/main.js"></script>
+    <title>AnnounceIT - Built for broadcasters</title>
+</head>
+
+<body>
+
+    <header>
+
+        <a class="brand" href="/">
+            <img class="brand-logo" src="./public/img/logo-light.png" alt="logo" height="30px">
+            <span class="brand-text">AnnounceIT</span class="brand-text">
+        </a>
+
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li>
+                    <a class="link" href="#">
+                        <img class="link-icon" src="./public/img/key.png" alt="log in">
+                        <span class="link-text">Sign in</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="#">
+                        <img class="link-icon" src="./public/img/user.png" height="16" alt="sign up">
+                        <span class="link-text">Create an account</span>
+                    </a>
+                </li>
+            </ul>
+            <img onclick="toggleMenu()" id="menu-toggle" src="./public/img/menu.png" alt="menu">
+        </nav>
+    </header>
+
+    <div id="dropdown-menu" class="text-center" style="display: none;">
+        <ul class="menu-links">
+            <li>
+                <a class="link menu-link" href="#">
+                    <img class="link-icon" src="./public/img/key.png" alt="log in">
+                    <span class="link-text">Sign in</span>
+                </a>
+            </li>
+            <li>
+                <a class="link menu-link" href="#">
+                    <img class="link-icon" src="./public/img/user.png" height="16" alt="sign up">
+                    <span class="link-text">Create an account</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="showcase">
+            <div class="text-center">
+
+                <img class="showcase-logo" height="70px" src="./public/img/logo.png">
+
+                <h1 class="site-name">AnnounceIT - Built for broadcasters</h1>
+
+                <p class="site-tagline">
+                    AnnounceIT allow broadcasting agencies to receive and manage announcements directly from
+                    their accounts.
+                    Start creating announcements by registering a new account, or log into your existing account.
+                </p>
+
+                <div class="showcase-actions">
+                    <a href="#" class="link btn-lg btn-accent">
+                        <img class="link-icon" src="./public/img/key.png" alt="log in">
+                        <span class="link-text">Create a new account</span>
+                    </a>
+                    <a href="#" class="link btn-lg btn-accent">
+                        <img class="link-icon" src="./public/img/user.png" alt="log in">
+                        <span class="link-text">Log into your account</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="text-center">&copy;<span id="copy-year"></span> AnnounceIT</p>
+    </footer>
+</body>
+
+</html>
