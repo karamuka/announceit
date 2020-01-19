@@ -36,7 +36,19 @@ h1 {
   padding: 15px 20px;
   font-size: 1em;
   font-weight: 500;
-  margin: 10px;
+  margin-right: 15px;
+}
+
+.btn-lg:hover {
+  text-decoration: underline;
+}
+
+.btn-lg:active {
+  color: #f2f2f2;
+}
+
+.btn-full {
+  width: 100%;
 }
 
 .text-center {
@@ -123,13 +135,18 @@ header {
   margin-top: 40px;
 }
 
-.site-name {
+.page-title {
   font-size: 30px;
   font-weight: bold;
+  margin-bottom: 40px;
 }
 
 footer {
   color: #aaa;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .footer-nav {
@@ -163,6 +180,38 @@ footer {
   border-top: 1px solid #f2f2f2;
 }
 
+.form-container {
+  width: 30%;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 20px;
+}
+
+.form-control {
+  margin-bottom: 30px;
+}
+
+.form-control label {
+  display: block;
+  padding-bottom: 5px;
+}
+
+input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #cccccc;
+  font-size: 16px;
+  font-weight: 100;
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+input:focus {
+  border-bottom: 2px solid #3b668c;
+}
+
 /* MEDIA */
 
 @media only screen and (max-width: 992px) {
@@ -173,6 +222,10 @@ footer {
   .showcase-actions > * {
     display: block;
   }
+
+  .form-container {
+    width: 60%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -182,6 +235,10 @@ footer {
 
   .showcase-actions > * {
     display: block;
+  }
+
+  .form-container {
+    width: 70%;
   }
 }
 
@@ -196,5 +253,9 @@ footer {
 
   #menu-toggle {
     display: block;
+  }
+
+  .form-container {
+    width: 90%;
   }
 }
