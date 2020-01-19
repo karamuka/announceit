@@ -36,13 +36,14 @@ h1 {
   padding: 15px 20px;
   font-size: 1em;
   font-weight: 500;
+  margin-right: 15px;
 }
 
-.btn-lg:hover{
+.btn-lg:hover {
   text-decoration: underline;
 }
 
-.btn-lg:active{
+.btn-lg:active {
   color: #f2f2f2;
 }
 
@@ -134,9 +135,10 @@ header {
   margin-top: 40px;
 }
 
-.site-name {
+.page-title {
   font-size: 30px;
   font-weight: bold;
+  margin-bottom: 40px;
 }
 
 footer {
