@@ -1,6 +1,6 @@
 # AnnounceIT
 
-## Project overview 
+## Project overview
 
 Since the rise of the internet, more people have switched their attention from spending hours
 watching TV and listening to the radio or even reading newspapers to scrolling and tapping on
