@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="../..">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="public/img/logo-light.png" type="image/png">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="create.css">
+    <script src="public/js/main.js"></script>
+    <title>AnnounceIT - Sign In</title>
+</head>
+
+<body>
+
+    <header>
+        <a class="brand" href="/">
+            <img class="brand-logo" src="public/img/logo-light.png" alt="logo" height="30px">
+            <span class="brand-text">AnnounceIT</span class="brand-text">
+        </a>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li>
+                    <a class="link" href="pages/signin">
+                        <img class="link-icon" src="public/img/key.png" alt="Sign In">
+                        <span class="link-text">Sign In</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="pages/signup/">
+                        <img class="link-icon" src="public/img/user.png" height="16" alt="sign up">
+                        <span class="link-text">Create an account</span>
+                    </a>
+                </li>
+            </ul>
+            <img onclick="toggleMenu()" id="menu-toggle" src="public/img/menu.png" alt="menu">
+        </nav>
+    </header>
+
+    <div id="dropdown-menu" class="text-center" style="display: none;">
+        <ul class="menu-links">
+            <li>
+                <a class="link menu-link" href="#">
+                    <img class="link-icon" src="public/img/key.png" alt="Sign In">
+                    <span class="link-text">Sign In</span>
+                </a>
+            </li>
+            <li>
+                <a class="link menu-link" href="#">
+                    <img class="link-icon" src="public/img/user.png" height="16" alt="sign up">
+                    <span class="link-text">Create an account</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <section>
+            <div class="form-container">
+
+                <h1 class="text-center page-title">Sign In</h1>
+
+                <form>
+                    <div class="form-control">
+                        <input type="text" name="email" placeholder="Email address" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-action">
+                        <input class="btn-lg btn-full btn-accent" type="submit" value="Create account">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="text-center">&copy;<span id="copy-year"></span> AnnounceIT</p>
+    </footer>
+</body>
+
+</html>
