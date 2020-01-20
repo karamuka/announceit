@@ -1,5 +1,4 @@
 
-// Toggle dropdownmenu on mobile & tablet
 function toggleMenu() {
     const menuToggle = document.querySelector('#menu-toggle');
     const dropdownMenu = document.querySelector('#dropdown-menu');
@@ -9,8 +8,6 @@ function toggleMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
-
-    // Set copyright year in footer
     const copyYear = document.querySelector('#copy-year');
     copyYear.textContent = new Date().getFullYear().toString();
 });
