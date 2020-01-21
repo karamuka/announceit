@@ -14,7 +14,8 @@ body {
   outline: none;
 }
 
-h1 {
+h1,
+h2 {
   color: #3b668c;
 }
 
@@ -249,10 +250,10 @@ input:focus {
 
 .tbl-action {
   max-width: 30px !important;
+  cursor: pointer !important;
 }
 
 .tbl-action:hover {
-  cursor: pointer;
   background-color: #f9f9f9;
 }
 
@@ -326,6 +327,18 @@ option {
 .filte-state {
   margin-right: 0px;
   margin-left: auto;
+}
+
+.view-anouncement {
+  padding: 1em;
+  width: 95%;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+}
+
+.view-anouncement p {
+  line-height: 1.5em;
+  color: #2c2c2c;
 }
 
 /* MEDIA */
