@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="../..">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="public/img/logo-light.png" type="image/png">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="pages/announcements/announcements.css">
+    <script src="public/js/main.js"></script>
+    <title>AnnounceIT - All announcements</title>
+</head>
+
+<body>
+
+    <header>
+        <a class="brand" href="">
+            <img class="brand-logo" src="public/img/logo-light.png" alt="logo" height="30px">
+            <span class="brand-text">AnnounceIT</span class="brand-text">
+        </a>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li>
+                    <a class="link" href="pages/signin">
+                        <img class="link-icon" src="public/img/user.png" alt="Sign In">
+                        <span class="link-text">Sign In</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="pages/signup/">
+                        <img class="link-icon" src="public/img/key.png" height="16" alt="sign up">
+                        <span class="link-text">Create an account</span>
+                    </a>
+                </li>
+            </ul>
+            <img onclick="toggleMenu()" id="menu-toggle" src="public/img/menu.png" alt="menu">
+        </nav>
+    </header>
+
+    <div id="dropdown-menu" class="text-center" style="display: none;">
+        <ul class="menu-links">
+            <li>
+                <a class="link menu-link" href="pages/signin">
+                    <img class="link-icon" src="public/img/user.png" alt="Sign In">
+                    <span class="link-text">Sign In</span>
+                </a>
+            </li>
+            <li>
+                <a class="link menu-link" href="pages/signup">
+                    <img class="link-icon" src="public/img/key.png" height="16" alt="sign up">
+                    <span class="link-text">Create an account</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <section>
+            <div class="dsb-container">
+
+                <h1 class="text-left dsb-title">Announcements</h1>
+
+                <div class="dsb-actions">
+                    <button class="link btn-md btn-accent">
+                        <span class="link-text">Create New</span>
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <th class="text-center">ID</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-left">Text</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center tbl-action">
+                                    <img class="post-action" src="public/img/edit.png" alt="edit">
+                                </td>
+                                <td class="text-center tbl-action">
+                                    <img class="post-action" src="public/img/delete.png" alt="edit">
+                                </td>
+                                <td class="text-center tbl-action">
+                                    <img class="post-action" src="public/img/visibility.png" alt="edit">
+                                </td>
+                                <td class="text-center">1001</td>
+                                <td class="text-center">Accepted</td>
+                                <td class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+                                    consectetur ipsum dolor sit amet consectetu...</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center tbl-action">
+                                    <img class="post-action" src="public/img/edit.png" alt="edit">
+                                </td>
+                                <td class="text-center tbl-action">
+                                    <img class="post-action" src="public/img/delete.png" alt="edit">
+                                </td>
+                                <td class="text-center tbl-action">
+                                    <img class="post-action" src="public/img/visibility.png" alt="edit">
+                                </td>
+                                <td class="text-center">1002</td>
+                                <td class="text-center">Accepted</td>
+                                <td class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+                                    consectetur ipsum dolor sit amet consectetu...</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center tbl-action">
+                                    <img class="post-action" src="public/img/edit.png" alt="edit">
+                                </td>
+                                <td class="text-center tbl-action">
+                                    <img class="post-action" src="public/img/delete.png" alt="edit">
+                                </td>
+                                <td class="text-center tbl-action">
+                                    <img class="post-action" src="public/img/visibility.png" alt="edit">
+                                </td>
+                                <td class="text-center">1003</td>
+                                <td class="text-center">Accepted</td>
+                                <td class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+                                    consectetur ipsum dolor sit amet consectetu...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="text-center">&copy;<span id="copy-year"></span> AnnounceIT</p>
+    </footer>
+</body>
+
+</html>

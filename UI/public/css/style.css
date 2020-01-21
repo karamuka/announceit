@@ -32,6 +32,14 @@ h1 {
   cursor: pointer;
 }
 
+.btn-md {
+  padding: 15px 20px;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
 .btn-lg {
   padding: 15px 20px;
   font-size: 1em;
@@ -53,11 +61,15 @@ h1 {
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .text-right {
-  text-align: right;
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
 }
 
 ul {
@@ -143,7 +155,7 @@ header {
 
 .page-title {
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 40px;
 }
 
@@ -216,6 +228,72 @@ input {
 
 input:focus {
   border-bottom: 2px solid #3b668c;
+}
+
+.dsb-title {
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.dsb-container {
+  margin: 0 20px 20px 20px;
+}
+
+.table-container {
+  max-height: 400px;
+  overflow: auto;
+  border: 1px solid #cccccc;
+}
+
+.tbl-action {
+  max-width: 30px !important;
+}
+
+.tbl-action:hover {
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.tbl-action:active {
+  background-color: #ffffff;
+}
+
+table {
+  background-color: #ffffff;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid #cccccc;
+}
+
+thead th {
+  font-weight: 500;
+  color: #3b668c;
+  font-size: 1em;
+  padding: 15px 5px;
+}
+
+table tbody {
+  font-size: 0.9em;
+  color: #2c2c2c;
+}
+
+tbody td {
+  padding: 0.7em;
+  border-bottom: 1px solid #cccccc;
+  border: 0px solid #ffffff;
+}
+
+table .post-action {
+  height: 20px;
+  cursor: pointer;
+}
+
+.dsb-actions {
+  display: block;
+  /* margin: 20px 0; */
 }
 
 /* MEDIA */
