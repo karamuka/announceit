@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="public/img/logo-light.png" type="image/png">
     <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="pages/signin/signin.css">
     <script src="public/js/main.js"></script>
     <title>AnnounceIT - Sign In</title>
 </head>
@@ -62,9 +62,9 @@
 
                 <h1 class="text-center page-title">Sign In</h1>
 
-                <form>
+                <form action="pages/announcements">
                     <div class="form-control">
-                        <input type="text" name="email" placeholder="Email address" required>
+                        <input type="email" name="email" placeholder="Email address" required>
                     </div>
                     <div class="form-control">
                         <input type="password" name="password" placeholder="Password" required>
@@ -74,7 +74,6 @@
                             Forgot password?
                         </a>
                     </div>
-
                     <div class="form-action">
                         <input class="btn-lg btn-full btn-accent" type="submit" value="Sign In">
                     </div>
