@@ -249,10 +249,10 @@ input:focus {
 
 .tbl-action {
   max-width: 30px !important;
+  cursor: pointer !important;
 }
 
 .tbl-action:hover {
-  cursor: pointer;
   background-color: #f9f9f9;
 }
 
