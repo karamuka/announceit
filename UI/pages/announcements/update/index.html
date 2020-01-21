@@ -64,12 +64,27 @@
 
                 <div class="form-container">
 
+                    <h2 class="dsb-title">Content</h2>
+
                     <form action="pages/announcements">
                         <div class="form-control">
                             <textarea placeholder="Type your announcement here..." name="announcement"
-                                rows="15">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, consectetur ipsum dolor sit amet consectetu</textarea>
+                                rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, consectetur ipsum dolor sit amet consectetu</textarea>
                         </div>
 
+                        <h2 class="dsb-title">Status</h2>
+
+                        <div class="filte-state">
+                            <select>
+                                <option value="accepted">Accepted</option>
+                                <option value="declined">Declined</option>
+                                <option value="active">Active</option>
+                                <option value="deactivated">Deactivated</option>
+                            </select>
+                        </div>
+
+                        <br>
+                        <br>
                         <button class="link btn-md btn-full btn-accent">
                             <span class="link-text">Update announcement</span>
                         </button>
