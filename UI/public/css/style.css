@@ -294,18 +294,17 @@ table .post-action {
   cursor: pointer;
 }
 
-select::-ms-expand {
-  display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
-}
-
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 15px 15px;
-  background-color: #f2f2f2;
-  color: #3b668c;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #cccccc;
+  font-size: 16px;
+  font-weight: 100;
+  padding-bottom: 8px;
+  width: 100%;
   margin-bottom: 15px;
+  background-color: transparent;
 }
 
 option {
