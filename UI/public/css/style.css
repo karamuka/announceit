@@ -215,7 +215,8 @@ footer {
   padding-bottom: 5px;
 }
 
-input {
+input,
+textarea {
   border-top: none;
   border-right: none;
   border-left: none;
@@ -226,6 +227,7 @@ input {
   width: 100%;
 }
 
+textarea:focus,
 input:focus {
   border-bottom: 2px solid #3b668c;
 }
