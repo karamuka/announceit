@@ -291,9 +291,39 @@ table .post-action {
   cursor: pointer;
 }
 
+select::-ms-expand {
+  display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 15px 15px;
+  background-color: #f2f2f2;
+  color: #3b668c;
+  margin-bottom: 15px;
+}
+
+option {
+  background-color: #f2f2f2;
+  color: #3b668c;
+  cursor: pointer;
+}
+
 .dsb-actions {
   display: block;
   /* margin: 20px 0; */
+}
+
+.dsb-actions {
+  display: flex;
+  align-items: center;
+}
+
+.filte-state {
+  margin-right: 0px;
+  margin-left: auto;
 }
 
 /* MEDIA */
