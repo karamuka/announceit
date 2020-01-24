@@ -62,15 +62,21 @@
 
                 <h1 class="text-center page-title">Create account</h1>
 
-                <form action="pages/signin">
+                <form action="pages/announcements">
+                    <div class="form-control">
+                        <input type="text" name="first-name" placeholder="Frst name" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" name="last-name" placeholder="Last name" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="tel" name="phone" placeholder="Phone number" required>
+                    </div>
                     <div class="form-control">
                         <input type="email" name="email" placeholder="Email address" required>
                     </div>
                     <div class="form-control">
                         <input type="password" name="password" placeholder="Password" required>
-                    </div>
-                    <div class="form-control">
-                        <input type="password" name="reapeat-password" placeholder="Reapeat password" required>
                     </div>
                     <div class="form-action">
                         <input class="btn-lg btn-full btn-accent" type="submit" value="Create account">
