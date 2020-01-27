@@ -9,30 +9,42 @@
     <link rel="shortcut icon" href="public/img/logo-light.png" type="image/png">
     <link rel="stylesheet" href="public/css/style.css">
     <script src="public/js/main.js"></script>
-    <title>AnnounceIT - Built for broadcasters</title>
+    <title>AnnounceIT - Built for advertisers</title>
 </head>
 
 <body>
 
     <header>
-
         <a class="brand" href="">
             <img class="brand-logo" src="public/img/logo-light.png" alt="logo" height="30px">
             <span class="brand-text">AnnounceIT</span class="brand-text">
         </a>
-
         <nav class="main-nav">
-            <ul class="nav-links">
+            <ul data-nav__links class="nav-links">
                 <li>
                     <a class="link" href="pages/signin">
-                        <img class="link-icon" src="public/img/key.png" alt="log in">
+                        <img class="link-icon" src="public/img/key.png" alt="Sign In">
                         <span class="link-text">Sign In</span>
                     </a>
                 </li>
                 <li>
-                    <a class="link" href="pages/signup">
+                    <a class="link" href="pages/signup/">
                         <img class="link-icon" src="public/img/user.png" height="16" alt="sign up">
                         <span class="link-text">Create an account</span>
+                    </a>
+                </li>
+            </ul>
+            <ul data-user__links class="nav-links">
+                <li>
+                    <a class="link" href="pages/announcements">
+                        <img class="link-icon" src="public/img/profile.png" alt="my account">
+                        <span class="link-text" data-current__user></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="pages/signin">
+                        <img class="link-icon" src="public/img/logout.png" alt="my account">
+                        <span class="link-text">Log Out</span>
                     </a>
                 </li>
             </ul>
@@ -41,7 +53,7 @@
     </header>
 
     <div id="dropdown-menu" class="text-center" style="display: none;">
-        <ul class="menu-links">
+        <ul data-dropdown__menu__links class="menu-links">
             <li>
                 <a class="link menu-link" href="pages/signin">
                     <img class="link-icon" src="public/img/key.png" alt="Sign In">
@@ -55,6 +67,19 @@
                 </a>
             </li>
         </ul>
+
+        <ul data-dropdown__menu__links__auth class="menu-links">
+            <li>
+                <a class="link menu-link" href="pages/announcements">
+                    <img class="link-icon" src="public/img/logo-light.png" alt="View Announcements">
+                    <span class="link-text">View Announcements</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div style="display: none;" data-dialog>
+        <span data-dialog__message></span>
     </div>
 
     <main>
@@ -63,7 +88,7 @@
 
                 <img class="showcase-logo" height="70px" src="public/img/logo.png">
 
-                <h1 class="page-title">AnnounceIT - Built for broadcasters</h1>
+                <h1 class="page-title">AnnounceIT - Built for advertisers</h1>
 
                 <p class="site-tagline">
                     AnnounceIT allow broadcasting agencies to receive and manage announcements directly from
@@ -87,7 +112,7 @@
     </main>
 
     <footer>
-        <p class="text-center">&copy;<span id="copy-year"></span> AnnounceIT</p>
+        <p class="text-center text-muted">&copy;<span id="copy-year"></span> AnnounceIT</p>
     </footer>
 </body>
 

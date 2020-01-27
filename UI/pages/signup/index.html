@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="pages/signup/signup.css">
     <script src="public/js/main.js"></script>
+    <script src="pages/signup/signup.js"></script>
     <title>AnnounceIT - Sign Up</title>
 </head>
 
@@ -21,7 +22,7 @@
             <span class="brand-text">AnnounceIT</span class="brand-text">
         </a>
         <nav class="main-nav">
-            <ul class="nav-links">
+            <ul data-nav__links class="nav-links">
                 <li>
                     <a class="link" href="pages/signin">
                         <img class="link-icon" src="public/img/key.png" alt="Sign In">
@@ -35,12 +36,26 @@
                     </a>
                 </li>
             </ul>
+            <ul data-user__links class="nav-links">
+                <li>
+                    <a class="link" href="pages/announcements">
+                        <img class="link-icon" src="public/img/profile.png" alt="my account">
+                        <span class="link-text" data-current__user></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="pages/signin">
+                        <img class="link-icon" src="public/img/logout.png" alt="my account">
+                        <span class="link-text">Log Out</span>
+                    </a>
+                </li>
+            </ul>
             <img onclick="toggleMenu()" id="menu-toggle" src="public/img/menu.png" alt="menu">
         </nav>
     </header>
 
     <div id="dropdown-menu" class="text-center" style="display: none;">
-        <ul class="menu-links">
+        <ul data-dropdown__menu__links class="menu-links">
             <li>
                 <a class="link menu-link" href="pages/signin">
                     <img class="link-icon" src="public/img/key.png" alt="Sign In">
@@ -54,6 +69,19 @@
                 </a>
             </li>
         </ul>
+
+        <ul data-dropdown__menu__links__auth class="menu-links">
+            <li>
+                <a class="link menu-link" href="pages/announcements">
+                    <img class="link-icon" src="public/img/logo-light.png" alt="View Announcements">
+                    <span class="link-text">View Announcements</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div style="display: none;" data-dialog>
+        <span data-dialog__message></span>
     </div>
 
     <main>
@@ -62,15 +90,18 @@
 
                 <h1 class="text-center page-title">Create account</h1>
 
-                <form action="pages/announcements">
-                    <div class="form-control">
-                        <input type="text" name="first-name" placeholder="Frst name" required>
+                <form onsubmit="signUp(event)">
+                    <div class="form-control-inline">
+                        <div class="form-control">
+                            <input type="text" name="firstName" placeholder="First name" required>
+                        </div>
+                        <div class="form-control">
+                            <input type="text" name="lastName" placeholder="Last name" required>
+                        </div>
                     </div>
+
                     <div class="form-control">
-                        <input type="text" name="last-name" placeholder="Last name" required>
-                    </div>
-                    <div class="form-control">
-                        <input type="tel" name="phone" placeholder="Phone number" required>
+                        <input type="number" name="phoneNumber" placeholder="Phone number" required>
                     </div>
                     <div class="form-control">
                         <input type="email" name="email" placeholder="Email address" required>
@@ -78,8 +109,16 @@
                     <div class="form-control">
                         <input type="password" name="password" placeholder="Password" required>
                     </div>
+                    <div class="form-control">
+                        <input type="text" name="address" placeholder="Address">
+                    </div>
                     <div class="form-action">
                         <input class="btn-lg btn-full btn-accent" type="submit" value="Create account">
+                    </div>
+                    <div class="form-control text-center">
+                        <a class="link-text" href="pages/signin">
+                            Sign In
+                        </a>
                     </div>
                 </form>
             </div>
@@ -87,8 +126,9 @@
     </main>
 
     <footer>
-        <p class="text-center">&copy;<span id="copy-year"></span> AnnounceIT</p>
+        <p class="text-center text-muted">&copy;<span id="copy-year"></span> AnnounceIT</p>
     </footer>
+
 </body>
 
 </html>
