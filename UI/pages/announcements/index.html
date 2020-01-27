@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="pages/announcements/announcements.css">
     <script src="public/js/main.js"></script>
+    <script src="pages/announcements/announcements.js"></script>
     <title>AnnounceIT - All announcements</title>
 </head>
 
@@ -21,7 +22,7 @@
             <span class="brand-text">AnnounceIT</span class="brand-text">
         </a>
         <nav class="main-nav">
-            <ul class="nav-links">
+            <ul data-nav__links class="nav-links">
                 <li>
                     <a class="link" href="pages/signin">
                         <img class="link-icon" src="public/img/key.png" alt="Sign In">
@@ -35,12 +36,26 @@
                     </a>
                 </li>
             </ul>
+            <ul data-user__links class="nav-links">
+                <li>
+                    <a class="link" href="pages/announcements">
+                        <img class="link-icon" src="public/img/profile.png" alt="my account">
+                        <span class="link-text" data-current__user></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="pages/signin">
+                        <img class="link-icon" src="public/img/logout.png" alt="my account">
+                        <span class="link-text">Log Out</span>
+                    </a>
+                </li>
+            </ul>
             <img onclick="toggleMenu()" id="menu-toggle" src="public/img/menu.png" alt="menu">
         </nav>
     </header>
 
     <div id="dropdown-menu" class="text-center" style="display: none;">
-        <ul class="menu-links">
+        <ul data-dropdown__menu__links class="menu-links">
             <li>
                 <a class="link menu-link" href="pages/signin">
                     <img class="link-icon" src="public/img/key.png" alt="Sign In">
@@ -54,6 +69,19 @@
                 </a>
             </li>
         </ul>
+
+        <ul data-dropdown__menu__links__auth class="menu-links">
+            <li>
+                <a class="link menu-link" href="pages/announcements">
+                    <img class="link-icon" src="public/img/logo-light.png" alt="View Announcements">
+                    <span class="link-text">View Announcements</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div style="display: none;" data-dialog>
+        <span data-dialog__message></span>
     </div>
 
     <main>
@@ -67,7 +95,7 @@
                         <span class="link-text">Create New</span>
                     </a>
 
-                    <a href="pages/advertisers" class="link btn-md btn-accent">
+                    <a data-view__advertisers href="pages/advertisers" class="link btn-md btn-accent">
                         <span class="link-text">View advertisers</span>
                     </a>
 
@@ -90,76 +118,23 @@
                             <td class="text-center"></td>
                             <th class="text-center">ID</th>
                             <th class="text-center">Status</th>
-                            <th class="text-left">Text</th>
+                            <th class="text-left">Titie</th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="text-center tbl-action">
-                                    <a href="pages/announcements/update">
-                                        <img class="post-action" src="public/img/edit.png" alt="edit">
-                                    </a>
-                                </td>
-                                <td class="text-center tbl-action">
-                                    <img class="post-action" src="public/img/delete.png" alt="delete">
-                                </td>
-                                <td class="text-center tbl-action">
-                                    <a href="pages/announcements/view">
-                                        <img class="post-action" src="public/img/visibility.png" alt="view">
-                                    </a>
-                                </td>
-                                <td class="text-center">1001</td>
-                                <td class="text-center">Accepted</td>
-                                <td class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                                    consectetur ipsum dolor sit amet consectetu...</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center tbl-action">
-                                    <a href="pages/announcements/update">
-                                        <img class="post-action" src="public/img/edit.png" alt="edit">
-                                    </a>
-                                </td>
-                                <td class="text-center tbl-action">
-                                    <img class="post-action" src="public/img/delete.png" alt="edit">
-                                </td>
-                                <td class="text-center tbl-action">
-                                    <a href="pages/announcements/view">
-                                        <img class="post-action" src="public/img/visibility.png" alt="view">
-                                    </a>
-                                </td>
-                                <td class="text-center">1002</td>
-                                <td class="text-center">Accepted</td>
-                                <td class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                                    consectetur ipsum dolor sit amet consectetu...</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center tbl-action">
-                                    <a href="pages/announcements/update">
-                                        <img class="post-action" src="public/img/edit.png" alt="edit">
-                                    </a>
-                                </td>
-                                <td class="text-center tbl-action">
-                                    <img class="post-action" src="public/img/delete.png" alt="edit">
-                                </td>
-                                <td class="text-center tbl-action">
-                                    <a href="pages/announcements/view">
-                                        <img class="post-action" src="public/img/visibility.png" alt="view">
-                                    </a>
-                                </td>
-                                <td class="text-center">1003</td>
-                                <td class="text-center">Accepted</td>
-                                <td class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                                    consectetur ipsum dolor sit amet consectetu...</td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
 
+                <p data-placeholder class="text-muted text-center">
+                    Loading...
+                </p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p class="text-center">&copy;<span id="copy-year"></span> AnnounceIT</p>
+        <p class="text-center text-muted">&copy;<span id="copy-year"></span> AnnounceIT</p>
     </footer>
 </body>
 
