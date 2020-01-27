@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="pages/signin/signin.css">
     <script src="public/js/main.js"></script>
+    <script src="pages/signin/signin.js"></script>
     <title>AnnounceIT - Sign In</title>
 </head>
 
@@ -21,7 +22,7 @@
             <span class="brand-text">AnnounceIT</span class="brand-text">
         </a>
         <nav class="main-nav">
-            <ul class="nav-links">
+            <ul data-nav__links class="nav-links">
                 <li>
                     <a class="link" href="pages/signin">
                         <img class="link-icon" src="public/img/key.png" alt="Sign In">
@@ -35,12 +36,26 @@
                     </a>
                 </li>
             </ul>
+            <ul data-user__links class="nav-links">
+                <li>
+                    <a class="link" href="pages/announcements">
+                        <img class="link-icon" src="public/img/profile.png" alt="my account">
+                        <span class="link-text" data-current__user></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="pages/signin">
+                        <img class="link-icon" src="public/img/logout.png" alt="my account">
+                        <span class="link-text">Log Out</span>
+                    </a>
+                </li>
+            </ul>
             <img onclick="toggleMenu()" id="menu-toggle" src="public/img/menu.png" alt="menu">
         </nav>
     </header>
 
     <div id="dropdown-menu" class="text-center" style="display: none;">
-        <ul class="menu-links">
+        <ul data-dropdown__menu__links class="menu-links">
             <li>
                 <a class="link menu-link" href="pages/signin">
                     <img class="link-icon" src="public/img/key.png" alt="Sign In">
@@ -54,6 +69,19 @@
                 </a>
             </li>
         </ul>
+
+        <ul data-dropdown__menu__links__auth class="menu-links">
+            <li>
+                <a class="link menu-link" href="pages/announcements">
+                    <img class="link-icon" src="public/img/logo-light.png" alt="View Announcements">
+                    <span class="link-text">View Announcements</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div style="display: none;" data-dialog>
+        <span data-dialog__message></span>
     </div>
 
     <main>
@@ -62,14 +90,14 @@
 
                 <h1 class="text-center page-title">Sign In</h1>
 
-                <form action="pages/announcements">
+                <form onsubmit="signIn(event)">
                     <div class="form-control">
                         <input type="email" name="email" placeholder="Email address" required>
                     </div>
                     <div class="form-control">
                         <input type="password" name="password" placeholder="Password" required>
                     </div>
-                    <div class="form-control text-center">
+                    <div class="form-control text-right">
                         <a class="link-text" href="pages/resetPassword">
                             Forgot password?
                         </a>
@@ -89,7 +117,7 @@
     </main>
 
     <footer>
-        <p class="text-center">&copy;<span id="copy-year"></span> AnnounceIT</p>
+        <p class="text-center text-muted">&copy;<span id="copy-year"></span> AnnounceIT</p>
     </footer>
 </body>
 
