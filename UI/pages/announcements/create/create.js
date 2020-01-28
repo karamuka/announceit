@@ -1,4 +1,4 @@
-const apiHost = 'https://an-it-p.herokuapp.com';
+const apiHost = 'https://an-it-p.herokuapp.com/api/v1';
 
 const createAnnouncement = (event) => {
     event.preventDefault();
