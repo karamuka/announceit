@@ -70,7 +70,7 @@ h2 {
 }
 
 .text-muted {
-  color: #cccccc;
+  color: #2c2c2c;
 }
 
 .text-right {
@@ -284,7 +284,7 @@ thead th {
   font-weight: 500;
   color: #3b668c;
   font-size: 1em;
-  padding: 15px 5px;
+  padding: 15px 10px;
 }
 
 table tbody {
@@ -357,14 +357,14 @@ option {
 
 .dialog-info {
   background-color: #ffffff;
-  border: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   color: #3b668c;
 }
 
 .dialog-error {
-  background-color: #f24405;
-  border: 1px solid #f24405;
-  color: #f2f2f2;
+  background-color: #ffffff;
+  border-bottom: 1px solid #cccccc;
+  color: orangered;
 }
 
 /* MEDIA */
@@ -416,5 +416,12 @@ option {
 
   .form-control-inline {
     display: block;
+  }
+
+  [data-filter__status],
+  [data-cell__status],
+  [data-cell__datecreated],
+  [data-cell__email] {
+    display: none;
   }
 }

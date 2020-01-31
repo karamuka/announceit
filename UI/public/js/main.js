@@ -25,7 +25,7 @@ const init = () => {
         userLinks.style['display'] = 'none';
         dropDownLinks.style['display'] = 'block';
         dropDownLinksAuth.style['display'] = 'none';
-        currentUser.innerHTML = session.firstName;
+        currentUser.innerHTML = '';
     }
 }
 
