@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="public/img/logo-light.png" type="image/png">
     <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="pages/announcements/create/create.css">
+    <link rel="stylesheet" href="pages/announcements/update/update.css">
+    <script src="pages/announcements/update/update.js"></script>
     <script src="public/js/main.js"></script>
     <title>AnnounceIT - Update announcement</title>
 </head>
@@ -89,23 +90,47 @@
 
                 <h1 class="dsb-title text-center">Update Announcement</h1>
 
-                <div class="form-container">
+                <div data-main class="form-container">
 
-                    <h2 class="dsb-title">Content</h2>
-
-                    <form action="pages/announcements">
+                    <form data-ann__details onsubmit="updateAnnouncement(event)">
+                        <label for="title">Title</label>
                         <div class="form-control">
-                            <input placeholder="Title" type="text" name="title">
-                        </div>
-                        <div class="form-control">
-                            <textarea placeholder="Type your announcement here..." name="announcement"
-                                rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, consectetur ipsum dolor sit amet consectetu</textarea>
+                            <input data-ann__title placeholder="Announcement title" type="text" name="title" required>
                         </div>
 
+                        <div class="form-control">
+                            <label for="startDate">Start Date</label>
+                            <input data-ann__start placeholder="Start date" type="datetime-local" name="startDate"
+                                required>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="endDate">End Date</label>
+                            <input data-ann__end placeholder="End date" type="datetime-local" name="endDate" required>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="content">Content</label>
+                            <textarea data-ann__text placeholder="Type your announcement text here..." name="text"
+                                rows="3" required></textarea>
+                        </div>
+
+                        <button data-action__dispatcher type="submit" class="link btn-md btn-full btn-accent">
+                            <span class="link-text">Update announcement</span>
+                        </button>
+
+                        <div class="form-control text-center">
+                            <a class="link-text" href="pages/announcements">
+                                View announcements
+                            </a>
+                        </div>
+                    </form>
+
+                    <div data-ann__status>
                         <h2 class="dsb-title">Status</h2>
 
                         <div class="filte-state">
-                            <select>
+                            <select data-filter__status>
                                 <option value="accepted">Accepted</option>
                                 <option value="declined">Declined</option>
                                 <option value="active">Active</option>
@@ -113,14 +138,19 @@
                             </select>
                         </div>
 
-                        <br>
-                        <br>
-                        <button class="link btn-md btn-full btn-accent">
-                            <span class="link-text">Update announcement</span>
-                        </button>
-                    </form>
+                        <div class="form-control text-center">
+                            <a class="link-text" href="pages/announcements">
+                                View announcements
+                            </a>
+                        </div>
+                    </div>
 
                 </div>
+
+                <div data-fetching class="text-center form-container">
+                    Please wait...
+                </div>
+
         </section>
     </main>
 

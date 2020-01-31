@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="public/img/logo-light.png" type="image/png">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="pages/advertisers/advertisers.css">
+    <script src="pages/advertisers/advertisers.js"></script>
     <script src="public/js/main.js"></script>
     <title>AnnounceIT - All advertisers</title>
 </head>
@@ -97,23 +98,15 @@
 
                 </div>
 
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <td class="text-center">Blackisted</td>
-                            <th class="text-left">First name</th>
-                            <th class="text-left">Last name</th>
-                            <th class="text-left">E-mail</th>
-                            <th class="text-left">Address</th>
-                        </thead>
-                        <tbody>
-
-                        </tbody>
-                    </table>
+                <div data-table__container class="table-container">
                 </div>
 
-                <p class="text-center text-muted" data-no__data>No advertisers</p>
+                <div data-fetching class="text-center form-container">
+                    Please wait...
+                </div>
 
+                <p data-placeholder class="text-muted text-center">
+                </p>
             </div>
         </section>
     </main>

@@ -2,7 +2,7 @@ const apiHost = 'https://an-it-p.herokuapp.com/api/v1';
 
 const signIn = (event) => {
     event.preventDefault();
-
+    setLoading(true);
     const user = {};
     const fields = document.querySelectorAll(".form-control input");
     fields.forEach(({ name, value }) => {
@@ -18,6 +18,7 @@ const signIn = (event) => {
     })
         .then(res => res.json())
         .then(final => {
+            setLoading(false);
             if (final.status === 'success') {
                 localStorage.setItem("session", JSON.stringify(final.data));
                 window.location.href = 'pages/announcements';
@@ -26,6 +27,7 @@ const signIn = (event) => {
             }
         })
         .catch((err) => {
+            setLoading(false);
             displayMessage(err.message || err, true);
         });
 }
@@ -54,6 +56,17 @@ const initSigInPage = () => {
     dropDownLinks.style['display'] = 'block';
     dropDownLinksAuth.style['display'] = 'none';
     userLinks.style['display'] = 'none';
+}
+
+const setLoading = (isLoading = true) => {
+    const actionBtn = document.querySelector("[data-action__dispatcher]");
+    if (isLoading) {
+        actionBtn.style['opacity'] = 0.7;
+        actionBtn.setAttribute('disabled', true);
+    } else {
+        actionBtn.style['opacity'] = 1;
+        actionBtn.removeAttribute('disabled');
+    }
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
