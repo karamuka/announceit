@@ -2,6 +2,7 @@ const apiHost = 'https://an-it-p.herokuapp.com/api/v1';
 
 const signUp = (event) => {
     event.preventDefault();
+    setLoading(true);
 
     const user = {};
     const fields = document.querySelectorAll(".form-control input");
@@ -18,6 +19,7 @@ const signUp = (event) => {
     })
         .then(res => res.json())
         .then(final => {
+            setLoading(false);
             if (final.status === 'success') {
                 localStorage.setItem("session", JSON.stringify(final.data));
                 window.location.href = 'pages/announcements';
@@ -26,6 +28,7 @@ const signUp = (event) => {
             }
         })
         .catch((err) => {
+            setLoading(false);
             displayMessage(err.message || err, true);
         });
 }
@@ -41,4 +44,15 @@ const displayMessage = (message, isError = false) => {
     setTimeout(() => {
         dialog.style['display'] = 'none';
     }, 5000);
+}
+
+const setLoading = (isLoading = true) => {
+    const actionBtn = document.querySelector("[data-action__dispatcher]");
+    if (isLoading) {
+        actionBtn.style['opacity'] = 0.7;
+        actionBtn.setAttribute('disabled', true);
+    } else {
+        actionBtn.style['opacity'] = 1;
+        actionBtn.removeAttribute('disabled');
+    }
 }

@@ -3,13 +3,15 @@ const apiHost = 'https://an-it-p.herokuapp.com/api/v1';
 const createAnnouncement = (event) => {
     event.preventDefault();
 
+    setLoading(true);
+
     const announcement = {};
     const fields = document.querySelectorAll(".form-control input, .form-control textarea");
     fields.forEach(({ name, value }) => {
         announcement[name] = value;
     });
 
-    fetch(`${apiHost}/announcement`,
+    fetch(`${apiHost}/announcements`,
         {
             method: "POST",
             body: JSON.stringify(announcement),
@@ -20,6 +22,7 @@ const createAnnouncement = (event) => {
         })
         .then(res => res.json())
         .then(final => {
+            setLoading(false);
             if (final.status === 'success') {
                 displayMessage(final.status, false);
                 window.location.href = 'pages/announcements';
@@ -28,6 +31,7 @@ const createAnnouncement = (event) => {
             }
         })
         .catch((err) => {
+            setLoading(false);
             displayMessage(err.message || err, true);
         });
 }
@@ -65,6 +69,24 @@ const initCreateAnnouncementPage = () => {
         dropDownLinks.style['display'] = 'block';
         dropDownLinksAuth.style['display'] = 'none';
         window.location.href = 'pages/signin';
+    }
+}
+
+const setLoading = (isLoading = true) => {
+    const actionBtn = document.querySelector("[data-action__dispatcher]");
+    const dataMain = document.querySelector("[data-main]");
+    const dataFetch = document.querySelector("[data-fetching]");
+
+    if (isLoading) {
+        dataMain.style['display'] = 'none';
+        dataFetch.style['display'] = 'block';
+        actionBtn.style['opacity'] = 0.7;
+        actionBtn.setAttribute('disabled', true);
+    } else {
+        dataMain.style['display'] = 'block';
+        dataFetch.style['display'] = 'none';
+        actionBtn.style['opacity'] = 1;
+        actionBtn.removeAttribute('disabled');
     }
 }
 

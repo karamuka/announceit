@@ -94,14 +94,13 @@
                     <a href="pages/announcements/create" class="link btn-md btn-accent">
                         <span class="link-text">Create New</span>
                     </a>
-
                     <a data-view__advertisers href="pages/advertisers" class="link btn-md btn-accent">
                         <span class="link-text">View advertisers</span>
                     </a>
-
                     <div class="filte-state">
-                        <select>
-                            <option value="all">Filer by state</option>
+                        <select data-filter__status>
+                            <option value="">Filter By Status</option>
+                            <option value="">All</option>
                             <option value="accepted">Accepted</option>
                             <option value="declined">Declined</option>
                             <option value="active">Active</option>
@@ -110,24 +109,14 @@
                     </div>
                 </div>
 
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <td class="text-center"></td>
-                            <td class="text-center"></td>
-                            <td class="text-center"></td>
-                            <th class="text-center">ID</th>
-                            <th class="text-center">Status</th>
-                            <th class="text-left">Titie</th>
-                        </thead>
-                        <tbody>
+                <div data-table__container class="table-container">
+                </div>
 
-                        </tbody>
-                    </table>
+                <div data-fetching class="text-center form-container">
+                    Please wait...
                 </div>
 
                 <p data-placeholder class="text-muted text-center">
-                    Loading...
                 </p>
             </div>
         </section>

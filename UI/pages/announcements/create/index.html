@@ -90,12 +90,13 @@
 
                 <h1 class="dsb-title text-center">Create Announcement</h1>
 
-                <div class="form-container">
+                <div data-main class="form-container">
 
                     <form onsubmit="createAnnouncement(event)">
 
                         <div class="form-control">
-                            <input placeholder="Title" type="text" name="title" required>
+                            <label for="title">Title</label>
+                            <input placeholder="Announcement title" type="text" name="title" required>
                         </div>
 
                         <div class="form-control">
@@ -109,15 +110,26 @@
                         </div>
 
                         <div class="form-control">
-                            <textarea placeholder="Type your announcement text here..." name="text" rows="5"
+                            <label for="content">Content</label>
+                            <textarea placeholder="Type your announcement text here..." name="text" rows="3"
                                 required></textarea>
                         </div>
 
-                        <button class="link btn-md btn-full btn-accent">
+                        <button type="submit" data-action__dispatcher class="link btn-md btn-full btn-accent">
                             <span class="link-text">Create announcement</span>
                         </button>
+
+                        <div class="form-control text-center">
+                            <a class="link-text" href="pages/announcements">
+                                View announcements
+                            </a>
+                        </div>
                     </form>
 
+                </div>
+
+                <div style="display: none;" data-fetching class="text-center form-container">
+                    Please wait...
                 </div>
         </section>
     </main>
